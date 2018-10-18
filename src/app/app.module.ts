@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HowtoComponent } from './howto/howto.component';
+import { HomeComponent } from './views/home/home.component';
+import { HowtoComponent } from './views/howto/howto.component';
+import { WikipediaModule} from './modules/wikipedia/wiki.module';
+import { WikiService } from './modules/wikipedia/wiki.service';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,10 @@ import { HowtoComponent } from './howto/howto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WikipediaModule,
   ],
-  providers: [],
+  providers: [WikiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
