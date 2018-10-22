@@ -15,18 +15,26 @@ export class WikiService {
     'Content-Type': 'application/json'
   });
   constructor(private http: Http) {
-    this.baseUri = 'https://en.wikipedia.org/w/api.php';
-    console.log(this.baseUri)
+    this.baseUri = 'http://ws.audioscrobbler.com/2.0';
+    console.log(this.baseUri);
   }
 
   getAllRest(): Observable<Object>{
-    return this.http.get(this.baseUri + '/?action=query&format=json&list=search&utf8=1&srsearch=Nelson%20Mandela')
-    .map(response => response.json())}; 
+    const url = this.baseUri + '/?method=chart.gettopartists&api_key=119e39cb330a0f59c3f1616150e3e8f0&format=json&limit='; 
+    console.log(url)
+    return this.http.get(url).map(response => response.json());
+     //this.http.get(this.baseUri + '').map(wiki => wiki.json())
+  }
+
+ // getAllRest(): Observable<Wiki>{
+    //return this.http.get(this.baseUri + '/volumes?q=isbn:0747532699')
+    //.map(wiki => wiki.json())}
+ // ; 
       //{
 
-      // const wiki = response.json(); 
-      // return wiki.map((wiki) => new Wiki(wiki));
+       //const wiki = response.json(); 
+       //return wiki.map((wiki) => new Wiki(wiki));
     // });
-  }
-  
+  //}
+//}
 }

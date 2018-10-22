@@ -17,13 +17,22 @@ export class HomeComponent implements OnInit {
 
   constructor(private wikiSvc: WikiService){}
 
+  //getAllRest(): void {
+    //this.wikiSvc.getAllRest()
+    //.subscribe((wikis: Wiki[]) => {
+         //this.wiki = wikis;
+         //console.log(this.wiki);
+    //});
+
+  //}
+
+
   ngOnInit() {
     this.wikiSvc
       .getAllRest()
-        .subscribe(
-          (wiki) => { 
-            this.wiki = wiki;}
-    )
+        .subscribe((wikis: Wiki[]) => {
+          this.wiki = wikis;
+          console.log(this.wiki);
+        });
   }
-
 }
