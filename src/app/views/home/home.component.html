@@ -33,4 +33,9 @@
                 </div>
             </div>
         </div>
-    </div>
+</div>
+<ul class="home">
+        <h3>{{selectedWiki.word | uppercase}} Details</h3>
+        <div><span>score: </span>{{selectedWiki.score}}</div>
+        <li *ngFor="let wiki of wikis" (click)="onSelect(wiki)">{{wiki.word}}</li>
+</ul>

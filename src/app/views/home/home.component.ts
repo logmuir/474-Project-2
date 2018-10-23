@@ -11,7 +11,8 @@ import 'rxjs/Rx';
 })
 export class HomeComponent implements OnInit {
   
-  wiki: Wiki[] = [];
+  //wiki: Wiki[] = [];
+  wikis: any; 
 
   constructor(private wikiSvc: WikiService){}
 
@@ -19,9 +20,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.wikiSvc
       .getAllRest()
-        .subscribe((wikis: Wiki[]) => {
-          this.wiki = wikis;
-          console.log(this.wiki);
+        .subscribe(wikis => {
+          this.wikis = wikis;
+          console.log(this.wikis);
         });
     console.log(this.wikiSvc)
   }
