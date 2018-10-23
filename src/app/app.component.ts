@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { WikiService } from './modules/wikipedia/wiki.service';
 import { Wiki } from './wiki';
+import * as $ from 'jquery';
 
 
 @Component({
