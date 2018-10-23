@@ -21,4 +21,4 @@ export class WikiService {
     console.log(url)
     return this.http.get(url).map(wiki => wiki.json());
   }
-}
+} 
