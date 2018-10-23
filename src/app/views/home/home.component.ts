@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WikiService } from './../../modules/wikipedia/wiki.service';
-import { HttpClient } from '@angular/common/http';
 import { Wiki } from './../../wiki';
 import 'rxjs/Rx';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-home',
@@ -17,15 +15,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private wikiSvc: WikiService){}
 
-  //getAllRest(): void {
-    //this.wikiSvc.getAllRest()
-    //.subscribe((wikis: Wiki[]) => {
-         //this.wiki = wikis;
-         //console.log(this.wiki);
-    //});
-
-  //}
-
 
   ngOnInit() {
     this.wikiSvc
@@ -34,5 +23,6 @@ export class HomeComponent implements OnInit {
           this.wiki = wikis;
           console.log(this.wiki);
         });
+    console.log(this.wikiSvc)
   }
 }
