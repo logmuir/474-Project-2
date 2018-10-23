@@ -1,15 +1,9 @@
-.height-fix{
-    position: relative;
-    min-height:1000px;
-    height: 0;
-}
-.height-fix>div{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-}
-.jumbotron{
-    margin-top:3.6em;
-}
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

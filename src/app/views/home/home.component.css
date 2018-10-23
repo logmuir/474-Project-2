@@ -1,15 +1,15 @@
-.height-fix{
-    position: relative;
-    min-height:1000px;
-    height: 0;
+#imaginary_container{
+    margin-top:20%; /* Don't copy this */
 }
-.height-fix>div{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+.stylish-input-group .input-group-addon{
+    background: white !important; 
 }
-.jumbotron{
-    margin-top:3.6em;
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
 }
