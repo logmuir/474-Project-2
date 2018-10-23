@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { WikiService } from './modules/wikipedia/wiki.service';
+import { RhymeService } from './modules/wikipedia/wiki.service';
 import { Wiki } from './wiki';
 //import * as $ from 'jquery';
 
@@ -15,7 +15,7 @@ export class AppComponent {
 
   wiki: Wiki[] = [];
   
-  constructor(private wikiSvc: WikiService){}
+  constructor(private wikiSvc: RhymeService){}
 
   ngOnInit() {
     this.wikiSvc

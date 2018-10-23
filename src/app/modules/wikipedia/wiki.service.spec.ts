@@ -1,14 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { WikiService } from './wiki.service';
+import { RhymeService } from './wiki.service';
 
-describe('WikiService', () => {
+describe('RhymeService', () => {
   beforeEach(() => 
     TestBed.configureTestingModule({
-      providers: [WikiService]
+      providers: [RhymeService]
     }));
 
-  it('should be created', inject([WikiService], (service: WikiService) => {
+  it('should be created', inject([RhymeService], (service: RhymeService) => {
     expect(service).toBeTruthy();
   }));
 });

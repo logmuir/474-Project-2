@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WikiService } from './modules/wikipedia/wiki.service';
+import { RhymeService } from './modules/wikipedia/wiki.service';
 import { HttpClientModule } from '@angular/common/http';
  
 @NgModule({
@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     WikipediaModule,
     HttpClientModule
   ],
-  providers: [WikiService],
+  providers: [RhymeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WikiService } from './../../modules/wikipedia/wiki.service';
+import { RhymeService } from './../../modules/wikipedia/wiki.service';
 import { Wiki } from './../../wiki';
 import 'rxjs/Rx';
 
@@ -7,14 +7,14 @@ import 'rxjs/Rx';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [WikiService]
+  providers: [RhymeService]
 })
 export class HomeComponent implements OnInit {
   
   //wiki: Wiki[] = [];
   wikis: any; 
 
-  constructor(private wikiSvc: WikiService){}
+  constructor(private wikiSvc: RhymeService){}
 
 
   ngOnInit() {

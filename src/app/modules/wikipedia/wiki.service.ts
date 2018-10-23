@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class WikiService {
+export class RhymeService {
   baseUri: string;
   private headers = new Headers({
     'Content-Type': 'application/json'
