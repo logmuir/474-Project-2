@@ -1,7 +1,7 @@
 export class Wiki {
 
-    id: number;
-    name: string;
+    word: string;
+    score: number;
 
     constructor(values: Object = {}){
         Object.assign(this, values);

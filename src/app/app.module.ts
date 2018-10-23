@@ -6,7 +6,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WikiService } from './modules/wikipedia/wiki.service';
-
+import { HttpClientModule } from '@angular/common/http';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { WikiService } from './modules/wikipedia/wiki.service';
     BrowserModule,
     AppRoutingModule,
     WikipediaModule,
+    HttpClientModule
   ],
   providers: [WikiService],
   bootstrap: [AppComponent]
