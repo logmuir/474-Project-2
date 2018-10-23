@@ -25,4 +25,10 @@ export class HomeComponent implements OnInit {
         });
     console.log(this.wikiSvc)
   }
-}
+
+  selectedWiki: Wiki;
+  onSelect(wiki: Wiki): void{
+    this.selectedWiki = wiki;
+  }
+
+} 

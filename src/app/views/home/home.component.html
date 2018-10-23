@@ -1,5 +1,9 @@
-Home is here
-<ul>
-  <li *ngFor='let item of wiki'>{{item.name}}</li>
-<p>This is the home component!</p>
+<h2>WIKIS </h2>
+<ul class="home">
+    <h3>{{selectedWiki.name | uppercase}} Details</h3>
+    <div><span>id: </span>{{selectedWiki.id}}</div>
+    <li *ngFor="let wiki of wikis" (click)="onSelect(wiki)">{{wiki.id}}</li>
+
+
 </ul>
+<p>This is the home component!</p>

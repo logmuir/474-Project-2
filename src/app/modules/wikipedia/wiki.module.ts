@@ -1,8 +1,11 @@
 import { Http, HttpModule } from '@angular/http';
-import { WikiService } from './wiki.service';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+@Component({
+
+}
+)
 
 @NgModule({
   imports: [CommonModule, HttpModule],
