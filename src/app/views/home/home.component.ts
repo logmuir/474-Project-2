@@ -26,10 +26,4 @@ export class HomeComponent implements OnInit {
           this.rhymes = rhymes;
         });
   }
-
-  selectedRhyme: Rhyme;
-  onSelect(rhyme: Rhyme): void{
-    this.selectedRhyme = rhyme;
-  }
-
 } 
