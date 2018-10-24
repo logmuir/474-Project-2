@@ -22,8 +22,8 @@ export class RhymeService {
     const url = this.baseUri + '?function=getRhymes&word=hello'; 
     return this.http.get(url).map(rhyme => rhyme.json());
   }*/
-  getAllRest(){
-    const url = this.baseUri + '?function=getRhymes&word=hello'; 
+  getAllRest(word : string){
+    const url = this.baseUri + '?function=getRhymes&word=' + word; 
     return this.http.get<any[]>(url).pipe(map(data => data));
   }
 } 
