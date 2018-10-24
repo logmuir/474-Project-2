@@ -11,9 +11,10 @@ import 'rxjs/Rx';
 })
 export class HomeComponent implements OnInit {
   
-  //rhyme: Rhyme[] = [];
+  public show:boolean = false;
+  public buttonName:any = 'Show';
   rhymes: any;
-  word: string = 'base'; 
+  word: string = ''; 
 
   constructor(private rhymeService: RhymeService){}
 
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
 
   onButtonClick(stringToSearchFor: string): void {
     this.word = stringToSearchFor;
+    this.show = true;
     this.getRhymes();
     console.log(stringToSearchFor)
   }
