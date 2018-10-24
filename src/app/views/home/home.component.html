@@ -29,7 +29,7 @@
                 <th>Frequency</th>
             </tr>
         </thead>
-        <tr *ngFor="let rhyme of rhymes" (click)="onSelect(rhyme)">
+        <tr *ngFor="let rhyme of rhymes | paginate: { itemsPerPage: 10, currentPage: p }; let i = index" (click)="onSelect(rhyme)">
             <td>
                 {{rhyme.word}}
             </td>
@@ -44,6 +44,7 @@
             </td>
         </tr>
     </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 </ng-container>
 </section>

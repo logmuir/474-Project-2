@@ -1,11 +1,13 @@
 import { HomeComponent } from './views/home/home.component';
-import { HowtoComponent } from './views/howto/howto.component';
+import { aboutusComponent } from './views/aboutus/aboutus.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContactComponent } from './views/contact/contact.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent },
-  {path: 'howto', component: HowtoComponent},
+  {path: 'aboutus', component: aboutusComponent},
+  {path: 'contact', component: ContactComponent},
   {
     path: '', 
     redirectTo: 'home', 

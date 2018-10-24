@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
   rhymes: any;
   word: string = ''; 
 
+  p: number = 1;
+
   constructor(private rhymeService: RhymeService){}
 
 
