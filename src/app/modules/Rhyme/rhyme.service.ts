@@ -9,8 +9,6 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-
-
 export class RhymeService {
   baseUri: string;
   private headers = new Headers({
@@ -24,10 +22,10 @@ export class RhymeService {
   /*getAllRest(): Observable<Object>{
     const url = this.baseUri + '?function=getRhymes&word=hello'; 
     console.log(url)
-    return this.http.get(url).map(wiki => wiki.json());
+    return this.http.get(url).map(rhyme => rhyme.json());
   }*/
-  getAllRest(chosenWord : string){
-    const url = this.baseUri + '?function=getRhymes&word=' + chosenWord; 
+  getAllRest(){
+    const url = this.baseUri + '?function=getRhymes&word=hello'; 
     console.log(url);
     return this.http.get<any[]>(url).pipe(map(data => data));
   }

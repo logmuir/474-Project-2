@@ -1,11 +1,11 @@
 import { HomeComponent } from './views/home/home.component';
 import { HowtoComponent } from './views/howto/howto.component';
-import { WikipediaModule} from './modules/wikipedia/wiki.module';
+import { RhymeModule} from './modules/Rhyme/rhyme.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RhymeService } from './modules/wikipedia/wiki.service';
+import { RhymeService } from './modules/Rhyme/rhyme.service';
 import { HttpClientModule } from '@angular/common/http';
  
 @NgModule({
@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    WikipediaModule,
+    RhymeModule,
     HttpClientModule
   ],
   providers: [RhymeService],

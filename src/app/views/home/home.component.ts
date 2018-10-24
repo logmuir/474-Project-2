@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RhymeService } from './../../modules/wikipedia/wiki.service';
-import { Wiki } from './../../wiki';
+import { RhymeService } from './../../modules/Rhyme/rhyme.service';
+import { Rhyme } from './../../rhyme';
 import 'rxjs/Rx';
 
 @Component({
@@ -11,25 +11,25 @@ import 'rxjs/Rx';
 })
 export class HomeComponent implements OnInit {
   
-  //wiki: Wiki[] = [];
-  wikis: any; 
+  //rhyme: Rhyme[] = [];
+  rhymes: any; 
 
-  constructor(private wikiSvc: RhymeService){}
+  constructor(private rhymeService: RhymeService){}
 
 
   ngOnInit() {
-    this.wikiSvc
+    this.rhymeService
       .getAllRest()
-        .subscribe(wikis => {
-          this.wikis = wikis;
-          console.log(this.wikis);
+        .subscribe(rhymes => {
+          this.rhymes = rhymes;
+          console.log(this.rhymes);
         });
-    console.log(this.wikiSvc)
+    console.log(this.rhymeService)
   }
 
-  selectedWiki: Wiki;
-  onSelect(wiki: Wiki): void{
-    this.selectedWiki = wiki;
+  selectedRhyme: Rhyme;
+  onSelect(rhyme: Rhyme): void{
+    this.selectedRhyme = rhyme;
   }
 
 } 

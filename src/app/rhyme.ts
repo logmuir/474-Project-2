@@ -1,4 +1,4 @@
-export class Wiki {
+export class Rhyme {
 
     word: string;
     score: number;

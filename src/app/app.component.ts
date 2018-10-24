@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-import { RhymeService } from './modules/wikipedia/wiki.service';
-import { Wiki } from './wiki';
+import { RhymeService } from './modules/Rhyme/rhyme.service';
+import { Rhyme } from './rhyme';
 //import * as $ from 'jquery';
 
 
@@ -13,18 +13,18 @@ import { Wiki } from './wiki';
 export class AppComponent {
   title = 'Project2';
 
-  wiki: Wiki[] = [];
+  rhyme: Rhyme[] = [];
   
-  constructor(private wikiSvc: RhymeService){}
+  constructor(private rhymeService: RhymeService){}
 
   ngOnInit() {
-    this.wikiSvc
+    this.rhymeService
       .getAllRest()
-        .subscribe((wikis: Wiki[]) => {
-          this.wiki = wikis;
-          console.log(this.wiki);
+        .subscribe((rhymes: Rhyme[]) => {
+          this.rhyme = rhymes;
+          console.log(this.rhyme);
         });
-    console.log(this.wikiSvc)
+    console.log(this.rhymeService)
   }
 
 } 
