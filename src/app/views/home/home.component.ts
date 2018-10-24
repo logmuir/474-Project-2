@@ -26,4 +26,8 @@ export class HomeComponent implements OnInit {
           this.rhymes = rhymes;
         });
   }
+
+  onSelect(rhyme: Rhyme): void{
+  }
+
 } 
