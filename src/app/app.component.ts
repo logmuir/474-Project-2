@@ -12,17 +12,4 @@ import { Rhyme } from './rhyme';
 })
 export class AppComponent {
   title = 'Project2';
-
-  rhyme: Rhyme[] = [];
-  
-  constructor(private rhymeService: RhymeService){}
-
-  ngOnInit() {
-    this.rhymeService
-      .getAllRest()
-        .subscribe((rhymes: Rhyme[]) => {
-          this.rhyme = rhymes;
-        });
-  }
-
 } 

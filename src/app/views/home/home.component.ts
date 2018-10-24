@@ -12,14 +12,15 @@ import 'rxjs/Rx';
 export class HomeComponent implements OnInit {
   
   //rhyme: Rhyme[] = [];
-  rhymes: any; 
+  rhymes: any;
+  word: string = 'base'; 
 
   constructor(private rhymeService: RhymeService){}
 
 
   ngOnInit() {
     this.rhymeService
-      .getAllRest()
+      .getAllRest(this.word)
         .subscribe(rhymes => {
           console.log(rhymes);
           this.rhymes = rhymes;
