@@ -17,11 +17,6 @@ export class RhymeService {
   constructor(private http: HttpClient) {
     this.baseUri = 'http://rhymebrain.com/talk';
   }
-
-  /*getAllRest(): Observable<Object>{
-    const url = this.baseUri + '?function=getRhymes&word=hello'; 
-    return this.http.get(url).map(rhyme => rhyme.json());
-  }*/
   getAllRest(word : string){
     const url = this.baseUri + '?function=getRhymes&word=' + word; 
     return this.http.get<any[]>(url).pipe(map(data => data));
