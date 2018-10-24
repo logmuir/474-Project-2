@@ -19,15 +19,25 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+    this.getRhymes()
+  }
+
+  getRhymes() {
     this.rhymeService
-      .getAllRest(this.word)
-        .subscribe(rhymes => {
-          console.log(rhymes);
-          this.rhymes = rhymes;
-        });
+    .getAllRest(this.word)
+      .subscribe(rhymes => {
+        console.log(rhymes);
+        this.rhymes = rhymes;
+      });
   }
 
   onSelect(rhyme: Rhyme): void{
+  }
+
+  onButtonClick(stringToSearchFor: string): void {
+    this.word = stringToSearchFor;
+    this.getRhymes();
+    console.log(stringToSearchFor)
   }
 
 } 
