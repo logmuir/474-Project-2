@@ -22,9 +22,7 @@ export class AppComponent {
       .getAllRest()
         .subscribe((rhymes: Rhyme[]) => {
           this.rhyme = rhymes;
-          console.log(this.rhyme);
         });
-    console.log(this.rhymeService)
   }
 
 } 

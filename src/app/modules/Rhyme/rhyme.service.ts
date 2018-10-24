@@ -16,17 +16,14 @@ export class RhymeService {
   });
   constructor(private http: HttpClient) {
     this.baseUri = 'http://rhymebrain.com/talk';
-    console.log(this.baseUri);
   }
 
   /*getAllRest(): Observable<Object>{
     const url = this.baseUri + '?function=getRhymes&word=hello'; 
-    console.log(url)
     return this.http.get(url).map(rhyme => rhyme.json());
   }*/
   getAllRest(){
     const url = this.baseUri + '?function=getRhymes&word=hello'; 
-    console.log(url);
     return this.http.get<any[]>(url).pipe(map(data => data));
   }
 } 
