@@ -37,6 +37,14 @@
     <div><span>score: </span>{{selectedRhyme.score}}</div>
 
     <table class="table-striped">
+        <thead>
+            <tr>
+                <th>Word</th>
+                <th>Syllables</th>
+                <th>Score</th>
+                <th>Frequency</th>
+            </tr>
+        </thead>
         <tr *ngFor="let rhyme of rhymes" (click)="onSelect(rhyme)">
             <td>
                 {{rhyme.word}}
