@@ -14,28 +14,44 @@
 <!-- Page Content -->
 <section class="py-5">
     <div class="container">
-          <h1 class="display-4">Enter your search word below to get started!</h1>
-          <p class="lead">For best results, enter one word at a time, be creative!</p>
+        <h1 class="display-4">Enter your search word below to get started!</h1>
+        <p class="lead">For best results, enter one word at a time, be creative!</p>
     </div>
 </section>
 <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <div id="imaginary_container"> 
-                    <div class="input-group stylish-input-group">
-                        <input type="text" class="form-control"  placeholder="Search" >
-                        <span class="input-group-addon">
-                            <button type="submit">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>  
-                        </span>
-                    </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 <ul class="home">
-        <h3>{{selectedRhyme.word | uppercase}} Details</h3>
-        <div><span>score: </span>{{selectedRhyme.score}}</div>
-        <li *ngFor="let rhyme of rhymes" (click)="onSelect(rhyme)">{{rhyme.word}}</li>
+    <h3>{{selectedRhyme.word | uppercase}} Details</h3>
+    <div><span>score: </span>{{selectedRhyme.score}}</div>
+
+    <table class="table-striped">
+        <tr *ngFor="let rhyme of rhymes" (click)="onSelect(rhyme)">
+            <td>
+                {{rhyme.word}}
+            </td>
+            <td>
+                {{rhyme.syllables}}
+            </td>
+            <td>
+                {{rhyme.score}}
+            </td>
+            <td>
+                {{rhyme.frequency}}
+            </td>
+        </tr>
+    </table>
 </ul>

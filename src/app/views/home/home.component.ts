@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
     this.rhymeService
       .getAllRest()
         .subscribe(rhymes => {
+          console.log(rhymes);
           this.rhymes = rhymes;
         });
   }
