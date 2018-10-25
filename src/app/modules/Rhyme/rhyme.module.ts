@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [CommonModule, HttpModule],
-   declarations: []
+  declarations: []
 })
 export class RhymeModule { }

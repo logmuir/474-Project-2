@@ -3,7 +3,7 @@ export class Rhyme {
     word: string;
     score: number;
 
-    constructor(values: Object = {}){
+    constructor(values: Object = {}) {
         Object.assign(this, values);
     }
 }

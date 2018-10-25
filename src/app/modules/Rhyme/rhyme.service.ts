@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers} from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
@@ -17,8 +17,8 @@ export class RhymeService {
   constructor(private http: HttpClient) {
     this.baseUri = 'http://rhymebrain.com/talk';
   }
-  getAllRest(word : string){
-    const url = this.baseUri + '?function=getRhymes&word=' + word; 
+  getAllRest(word: string) {
+    const url = this.baseUri + '?function=getRhymes&word=' + word;
     return this.http.get<any[]>(url).pipe(map(data => data));
   }
 } 

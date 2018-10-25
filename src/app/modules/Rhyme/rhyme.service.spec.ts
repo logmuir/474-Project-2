@@ -3,7 +3,7 @@ import { TestBed, inject } from '@angular/core/testing';
 import { RhymeService } from './rhyme.service';
 
 describe('RhymeService', () => {
-  beforeEach(() => 
+  beforeEach(() =>
     TestBed.configureTestingModule({
       providers: [RhymeService]
     }));

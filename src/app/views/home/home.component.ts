@@ -10,15 +10,15 @@ import 'rxjs/Rx';
   providers: [RhymeService]
 })
 export class HomeComponent implements OnInit {
-  
-  public show:boolean = false;
-  public buttonName:any = 'Show';
+
+  public show: boolean = false;
+  public buttonName: any = 'Show';
   rhymes: any;
-  word: string = ''; 
+  word: string = '';
 
   p: number = 1;
 
-  constructor(private rhymeService: RhymeService){}
+  constructor(private rhymeService: RhymeService) { }
 
 
   ngOnInit() {
@@ -27,14 +27,14 @@ export class HomeComponent implements OnInit {
 
   getRhymes() {
     this.rhymeService
-    .getAllRest(this.word)
+      .getAllRest(this.word)
       .subscribe(rhymes => {
         console.log(rhymes);
         this.rhymes = rhymes;
       });
   }
 
-  onSelect(rhyme: Rhyme): void{
+  onSelect(rhyme: Rhyme): void {
   }
 
   onButtonClick(stringToSearchFor: string): void {
@@ -45,9 +45,9 @@ export class HomeComponent implements OnInit {
   }
 
   onEnter(event) {
-    if(event.keyCode == 13) {
+    if (event.keyCode == 13) {
       this.onButtonClick(event.target.value);
       return false;
     }
-  } 
+  }
 }
