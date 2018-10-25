@@ -8,9 +8,7 @@
         <div class="col-sm-10 col-sm-offset-3">
             <div id="imaginary_container">
                 <div class="input-group stylish-input-group">
-                    <form (keydown)="onEnter($event)">
-                        <input #wordToSearchFor type="text" class="form-control" placeholder="Search...">
-                    </form>
+                    <input (keydown)="onEnter($event)" #wordToSearchFor type="text" class="form-control" placeholder="Search...">
                     <button (click)="onButtonClick(wordToSearchFor.value)">
                         <span class="glyphicon glyphicon-search">Submit</span>
                     </button>
