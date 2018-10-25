@@ -44,4 +44,10 @@ export class HomeComponent implements OnInit {
     console.log(stringToSearchFor)
   }
 
-} 
+  onEnter(event) {
+    if(event.keyCode == 13) {
+      this.onButtonClick(event.target.value);
+      return false;
+    }
+  } 
+}
